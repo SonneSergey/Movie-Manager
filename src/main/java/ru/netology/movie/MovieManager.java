@@ -4,7 +4,7 @@ public class MovieManager {
     private String[] movies = new String[0];
     private int limit;
 
-    // Конструктор по умолчанию (лимит 5 фильмов)
+    // Конструктор (лимит 5 фильмов)
     public MovieManager() {
         this.limit = 5;
     }
@@ -31,10 +31,10 @@ public class MovieManager {
 
     // Метод для получения последних фильмов в обратном порядке
     public String[] findLast() {
-        int resultLength = Math.min(movies.length, limit); // Определяем длину результата
+        int resultLength = Math.min(movies.length, limit);
         String[] result = new String[resultLength];
         for (int i = 0; i < resultLength; i++) {
-            result[i] = movies[movies.length - 1 - i]; // Заполняем массив в обратном порядке
+            result[i] = movies[movies.length - 1 - i];
         }
         return result;
     }
